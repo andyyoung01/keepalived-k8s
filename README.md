@@ -1,2 +1,2 @@
-# keepalived-k8s
+# Keepalived for Kubernetes cluster setup
 Keepalived for Kubernetes cluster setup
