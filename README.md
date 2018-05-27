@@ -28,3 +28,17 @@ bash start-keepalived.sh
 ```
 tcpdump -nn -i any net 224.0.0.0/8
 ```
+
+扫描结果范例如下：
+
+```
+[root@k8s01 ~]# tcpdump -nn -i any net 224.0.0.0/8
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked), capture size 262144 bytes
+18:45:39.823877 IP 192.168.9.11 > 224.0.0.18: VRRPv2, Advertisement, vrid 160, prio 100, authtype simple, intvl 1s, length 20
+18:45:40.824667 IP 192.168.9.11 > 224.0.0.18: VRRPv2, Advertisement, vrid 160, prio 100, authtype simple, intvl 1s, length 20
+18:45:41.826097 IP 192.168.9.11 > 224.0.0.18: VRRPv2, Advertisement, vrid 160, prio 100, authtype simple, intvl 1s, length 20
+18:45:42.826900 IP 192.168.9.11 > 224.0.0.18: VRRPv2, Advertisement, vrid 160, prio 100, authtype simple, intvl 1s, length 20
+```
+
+这就说明不能再使用VRID=160的设定了。
