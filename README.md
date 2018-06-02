@@ -16,6 +16,7 @@ NETMASK_BIT=24
 CHECK_PORT=6444
 RID=10
 VRID=160
+MCAST_GROUP=224.0.0.18
 ```
 
 运行start-haproxy.sh脚本
